@@ -1,0 +1,17 @@
+MessageType1,apple,10p
+MessageType2,20,banana,10p
+MessageType1,rice,20p
+MessageType1,wheat,15p
+MessageType1,apple,10p
+MessageType2,20,banana,10p
+MessageType2,40,rice,20p
+MessageType2,30,wheat,15p
+MessageType1,apple,10p
+MessageType2,20,banana,10p
+MessageType2,20,mango,10p
+MessageType2,40,turmeric,20p
+MessageType2,40,turmeric,20p
+MessageType2,40,turmeric,20p
+MessageType2,40,turmeric,20p
+MessageType2,40,turmeric,20p
+MessageType2,40,turmeric,20p
