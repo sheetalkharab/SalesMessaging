@@ -6,8 +6,8 @@ intellij
 assumption:
 it is assumed file are sales messages are of 2 types and are stored in file in resource folder.
 Message can be only in below 2 formats, else program will throw IO exception:
- >MessageType1,apple,10p
- >MessageType2,20,banana,10p
+ > MessageType1,apple,10p.   
+ > MessageType2,20,banana,10p
 
 task:
 Processing requirements:
@@ -33,3 +33,4 @@ command and execute:
 future enhancement:
 providing interface to user to provide input from outside of project.
 storing record files in more standard way
+exception handling enhancement.
