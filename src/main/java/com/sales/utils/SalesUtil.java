@@ -5,7 +5,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,16 +28,16 @@ public class SalesUtil {
                 if ("MessageType1".equals(lineValues[0])) {
                     message.setMessageType(lineValues[0]);
                     message.setProductName(lineValues[1]);
-                    message.setProductPrice(Long.valueOf(lineValues[2].trim().substring(0, lineValues[2].length() - 1)));
+                    message.setProductPrice(Long.parseLong(lineValues[2].trim().substring(0, lineValues[2].length() - 1)));
                     message.setCount(1);
 
                     message.setTotal(message.getProductPrice());
 
                 } else if ("MessageType2".equals(lineValues[0])) {
                     message.setMessageType(lineValues[0]);
-                    message.setCount(Integer.valueOf(lineValues[1].trim()));
+                    message.setCount(Integer.parseInt(lineValues[1].trim()));
                     message.setProductName(lineValues[2]);
-                    message.setProductPrice(Long.valueOf(lineValues[3].trim().substring(0, lineValues[3].length() - 1)));
+                    message.setProductPrice(Long.parseLong(lineValues[3].trim().substring(0, lineValues[3].length() - 1)));
 
                     message.setTotal(message.getCount() * message.getProductPrice());
                 }

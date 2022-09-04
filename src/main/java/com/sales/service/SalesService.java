@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectOutputStream;
 import java.net.URISyntaxException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -43,10 +41,10 @@ public class SalesService {
 
                     messageMap.keySet().forEach(mapElement -> {
 
-                        Double total = messageMap.get(mapElement).stream()
+                        double total = messageMap.get(mapElement).stream()
                                 .mapToDouble(msg -> msg.getTotal()).sum();
 
-                        Long count = messageMap.get(mapElement).stream()
+                        long count = messageMap.get(mapElement).stream()
                                 .mapToLong(msg -> msg.getCount()).sum();
 
                         System.out.println(String.format("For Product: %s Count is: %d and price is: £%.2f", mapElement, count,total/100));
