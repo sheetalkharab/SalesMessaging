@@ -63,7 +63,7 @@ public class SalesService {
 
         mList.forEach(ot -> {
             try {
-                o.writeObject(ot);
+                o.writeObject(ot.toString());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

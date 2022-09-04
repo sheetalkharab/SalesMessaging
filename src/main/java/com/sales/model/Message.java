@@ -52,9 +52,8 @@ public class Message implements Serializable {
 
     @Override
     public String toString() {
-        return "Message" +
-                "messageType='" + messageType + '\'' +
-                ", productName='" + productName + '\'' +
+        return "messageType=" + messageType +
+                ", productName=" + productName +
                 ", productPrice=" + productPrice +
                 ", count=" + count +
                 ", total=" + total ;
