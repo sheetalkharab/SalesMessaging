@@ -56,7 +56,7 @@ public class Message implements Serializable {
                 ", productName=" + productName +
                 ", productPrice=" + productPrice +
                 ", count=" + count +
-                ", total=" + total ;
+                ", total=" + total +"\n";
 
     }
 }

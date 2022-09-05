@@ -56,18 +56,16 @@ public class SalesService {
     }
 
     public void recordSalesMessages(String fileName, List<Message> mList) throws IOException {
-        FileOutputStream f = new FileOutputStream(new Date().getTime() + ".txt");
-        ObjectOutputStream o = new ObjectOutputStream(f);
+        FileOutputStream fos = new FileOutputStream(new Date().getTime() + ".txt");
+        ObjectOutputStream os = new ObjectOutputStream(fos);
 
-        mList.forEach(ot -> {
+        mList.forEach(message -> {
             try {
-                o.writeObject(ot.toString());
+                os.writeObject(message.toString());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         });
-        o.close();
-        f.close();
     }
 
 }
